@@ -14,7 +14,7 @@ const Navbar = () => {
           <HomeIcon />{" "}
         </p>
       </NavLink>
-      <nav className="flex text-lg gap-7 font-medium"></nav>
+      <nav className="flex  text-lg gap-7 font-medium"></nav>
       <NavLink
         to="/about"
         className={({ isActive }) =>

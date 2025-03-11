@@ -27,11 +27,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .head-text {
-    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+    @apply sm:text-4xl text-3xl font-semibold sm:leading-snug font-poppins;
   }
 
   .subhead-text {
-    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+    @apply font-semibold sm:text-2xl text-lg relative font-poppins;
   }
 
   .blue-gradient_text {
@@ -74,9 +74,7 @@ body:has(.card[data-color="green"]:hover) {
     @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
   }
 
-  .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
-  }
+
 }
 
 .glassmorphism {

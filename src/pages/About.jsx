@@ -18,7 +18,7 @@ const About = () => {
           Mehak Mattoo
         </span>
       </h1>
-      <div className="mt-5 flex flex-col gap-3 text-slate-500">
+      <div className="mt-5 text-sm md:text-base gap-3 text-slate-500">
         <p>
         A motivated full-stack developer with hands-on experience in the MERN stack, proficient in creating user-friendly and dynamic web applications. Known for strong problem-solving abilities, effective teamwork, and exceptional communication skills,
         contributing to both individual and team success in high-pressure environments.
@@ -57,7 +57,7 @@ const About = () => {
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
-                      className="w-[60%] h-[60%] object-contain"
+                      className="w-[90%] h-[90%] object-contain"
                     />
                   </div>
                 }
@@ -69,12 +69,12 @@ const About = () => {
                 }}
               >
                 <div>
-                  <h3 className="text-black text-l font-poppins font-semibold">
+                  <h3 className=" text-l font-poppins font-semibold">
                     {experience.title}
                   </h3>
 
                   <p
-                    className="text-black-500 font-medium text-base"
+                    className="text-gray-500 font-medium text-base"
                     style={{ margin: 0 }}
                   >
                     {experience.company_name}
@@ -84,7 +84,7 @@ const About = () => {
                   {experience.points.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}
-                      className="text-black-500/80 font-normal pl-1 text-sm"
+                      className="text-gray-600 pl-1 text-xs md:text-sm"
                     >
                       {point}
                     </li>

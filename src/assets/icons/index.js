@@ -28,8 +28,10 @@ import bootstrap from "./bootstrap.png";
 import note from "./note.png";
 import soundoff from "./soundoff.png";
 import figma from "./figma.svg";
+import next from "./next.png";
 
 export {
+  next,
   css,
   express,
   git,

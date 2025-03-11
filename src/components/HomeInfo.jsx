@@ -4,9 +4,9 @@ import { arrow } from "../assets/icons";
 const HomeInfo = ({ currentStage }) => {
   if (currentStage === 1)
     return (
-      <h1 className="sm:text-l sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
+      <h1 className="text-l sm:leading-snug text-center neo-brutalism-blue py-2 px-5 md:py-4 md:px-8 text-white mx-2 md:mx-5">
         Hi, I'm
-        <span className="font-bold m-2 text-white">Mehak Mattoo</span>
+        <span className="font-bold  m-2 text-white">Mehak Mattoo</span>
         <br />
         Your Partner in Digital Innovation
       </h1>

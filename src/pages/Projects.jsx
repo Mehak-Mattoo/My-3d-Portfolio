@@ -5,15 +5,7 @@ import { arrow } from "../assets/icons";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
-  const downloadResume = () => {
-    // doesnt work
-    const link = document.createElement("a");
-    link.href = "../../public/Mehak_Mattoo_Resume.pdf";
-    link.download = "Mehak_Mattoo_Resume.pdf"; // Specify the downloaded file name
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  
   return (
     <section className="max-container">
       <div className="text-slate-500 mt-2 leading-relaxed">
@@ -32,16 +24,29 @@ const Projects = () => {
                 <img
                   src={project.iconUrl}
                   alt="threads"
-                  className="w-1/2 h-1/2 object-contain"
+                  className="w-3/4 h-3/4 object-contain"
                 />
               </div>
             </div>
 
             <div className="mt-5 flex flex-col">
-              <h4 className="text-2xl font-poppins font-semibold">
+              <h4 className="text-xl md:text-2xl font-poppins font-semibold">
                 {project.name}
               </h4>
-              <p className="mt-2 text-slate-500">{project.description}</p>
+              {(Array.isArray(project.description)
+                ? project.description
+                : [project.description]
+              )
+                .filter(Boolean) // Removes falsy values (null, undefined, etc.)
+                .map((desc, index) => (
+                  <p
+                    key={index}
+                    className="mt-2 text-sm md:text-base text-slate-500"
+                  >
+                    {desc}
+                  </p>
+                ))}
+
               <div className="mt-5 flex items-center gap-2 font-poppins">
                 <Link
                   to={project.link}
@@ -54,7 +59,7 @@ const Projects = () => {
                 <img
                   src={arrow}
                   alt="arrow"
-                  className="w-4 h-4 object-contain"
+                  className="w-3 h-3 object-contain"
                 />
               </div>
             </div>
@@ -63,16 +68,13 @@ const Projects = () => {
       </div>
 
       <button className="btn">
-
-      <a
-        href="../../public/Mehak_Mattoo_Resume.pdf" // Path
-        download="Mehak_Mattoo_Resume.pdf" // Name of the file when downloaded
-      >
-        Download Resume
-      </a>
+        <a
+          href="../../public/Mehak_Mattoo_Resume.pdf" // Path
+          download="Mehak_Mattoo_Resume.pdf" // Name of the file when downloaded
+        >
+          Download Resume
+        </a>
       </button>
-
-   
 
       <hr className="mt-5 border-slate-200" />
 

@@ -1,4 +1,11 @@
-import { chegg, payr, fliprobo, summarizeX } from "../assets/images";
+import {
+  chegg,
+  payr,
+  fliprobo,
+  summarizeX,
+  scriptsolve,
+  plane,
+} from "../assets/images";
 
 import {
   contact,
@@ -23,12 +30,12 @@ import {
   redux,
   java,
   tailwindcss,
-figma,
-typescript
+  figma,
+  typescript,
+  next,
 } from "../assets/icons";
 
 export const skills = [
-  
   {
     imageUrl: java,
     name: "Java",
@@ -44,8 +51,6 @@ export const skills = [
     name: "CSS",
     type: "Frontend",
   },
-
-
 
   {
     imageUrl: typescript,
@@ -116,26 +121,39 @@ export const skills = [
     type: "Frontend",
   },
 
- 
   {
     imageUrl: figma,
     name: "Figma",
     type: "Frontend",
   },
 
-
-
+  {
+    imageUrl: next,
+    name: "NextJs",
+    type: "Frontend",
+  },
 ];
 
 export const experiences = [
   {
     title: "Full Stack Developer Intern",
+    company_name: "ScriptSolve",
+    icon: scriptsolve,
+    iconBg: "#DDE1E4",
+    date: "Jan 2025 - Present",
+    points: [
+      "Expedited and maintained responsive web application using Next.js, improving load times by 30%",
+      "Transformed user navigation with dynamic routing and seamless API integrations, boosting page interactions by 25%",
+    ],
+  },
+  {
+    title: "Full Stack Developer Intern",
     company_name: "Payr",
     icon: payr,
     iconBg: "#000000",
-    date: "Aug 2024 - Present",
+    date: "Aug 2024 - Dec 2024",
     points: [
-      "Boosted partner engagement by 40% by designing and implementing seamless API integrations, enabling external organizations to contribute content directly to the platform.",
+      "Expedited and maintained responsive web application using Next.js, improving load times by 30%.",
       "Reduced server load by 20% by integrating AWS S3 for seamless media storage by offloading file handling to the cloud",
       "Spearheaded a multi-account login system, allowing users to seamlessly manage multiple accounts from a single platform, increasing user efficiency by 10%.",
       "Participated in code reviews, debugging sessions, and the deployment of updates in a fast-paced environment.",
@@ -145,12 +163,11 @@ export const experiences = [
     title: "Java Intern",
     company_name: "Flip Robo Technologies",
     icon: fliprobo,
-    iconBg: "#ee6b6e",
+    iconBg: "#E6D3A3",
     date: "Oct 2023 - Feb 2024",
     points: [
       "Delivered end-to-end development for 5+ web applications, ensuring user-friendly experiences",
       "Implemented responsive designs and integrated external APIs to enhance application functionality.",
-
     ],
   },
 ];
@@ -175,17 +192,26 @@ export const socialLinks = [
 
 export const projects = [
   {
+    iconUrl: plane,
+    theme: "btn-back-red",
+    name: "TicketParse - Plane Ticket Data Parser",
+    description: [
+      "Devised an application to process plane ticket data from PDFs into a flexible ticket template that adapts to different ticket inputs.",
+    ],
+    link: "https://github.com/Mehak-Mattoo/Ticket-Parse",
+  },
+  {
     iconUrl: summarizeX,
-    theme: "btn-back-blue",
+    theme: "btn-back-black",
     name: "SummarizeX - AI Article Summarizer",
     description:
-    "Developed an AI-powered summarizer with features like PDF/DOC downloads, handling over 100+ summaries monthly.",
+      "Developed an AI-powered summarizer with features like PDF/DOC downloads, handling over 100+ summaries monthly.",
     link: "https://summarize-x.vercel.app/",
   },
 
   {
     iconUrl: news,
-    theme: "btn-back-yellow",
+    theme: "btn-back-red",
     name: "News Verse",
     description:
       "Built a responsive news website serving real-time updates across 10+ categories, ensuring the website provides the latest information with no delays.",
@@ -193,7 +219,7 @@ export const projects = [
   },
   {
     iconUrl: chat,
-    theme: "btn-back-orange",
+    theme: "btn-back-pink",
     name: "Converso - A Chat Application",
     description:
       "Engineered a messaging platform using MERN stack with real-time bi-directional communication between users.",
