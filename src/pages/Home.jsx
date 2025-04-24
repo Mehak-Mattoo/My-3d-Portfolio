@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons";
+
 const Island = lazy(() => import("../models/Island"));
 const Sky = lazy(() => import("../models/Sky"));
 const Bird = lazy(() => import("../models/Bird"));
@@ -10,14 +11,64 @@ const Plane = lazy(() => import("../models/Plane"));
 const HomeInfo = lazy(() => import("../components/HomeInfo"));
 
 const Home = () => {
-  const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
-  audioRef.current.loop = true;
-
+  const audioRef = useRef(null);
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(false); // Start with music playing
-  const [audioLoaded, setAudioLoaded] = useState(false);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  const [audioInitialized, setAudioInitialized] = useState(false);
+  const playPromiseRef = useRef(null);
+
+  useEffect(() => {
+    // Initialize audio on component mount
+    audioRef.current = new Audio(sakura);
+    audioRef.current.volume = 0.4;
+    audioRef.current.loop = true;
+    setAudioInitialized(true);
+
+    // Cleanup on unmount
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.src = "";
+      }
+    };
+  }, []);
+
+  // Handle audio play/pause when isPlayingMusic changes
+  useEffect(() => {
+    if (!audioRef.current || !audioInitialized) return;
+
+    const playAudio = async () => {
+      try {
+        // Wait for any existing play promise to resolve or reject
+        if (playPromiseRef.current) {
+          try {
+            await playPromiseRef.current;
+          } catch (e) {
+            // Ignore errors from previous play promises
+          }
+          playPromiseRef.current = null;
+        }
+
+        if (isPlayingMusic) {
+          // Store the new play promise
+          playPromiseRef.current = audioRef.current.play();
+          await playPromiseRef.current;
+        } else {
+          audioRef.current.pause();
+        }
+      } catch (error) {
+        console.log("Audio playback error:", error);
+        setIsPlayingMusic(false);
+      }
+    };
+
+    playAudio();
+  }, [isPlayingMusic, audioInitialized]);
+
+  const toggleMusic = () => {
+    setIsPlayingMusic((prev) => !prev);
+  };
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -32,18 +83,6 @@ const Home = () => {
     }
     return [screenScale, screenPosition, rotation];
   };
-
-  useEffect(() => {
-    if (isPlayingMusic && !audioLoaded) {
-      audioRef.current.src = sakura;
-      audioRef.current.play();
-      setAudioLoaded(true);
-    }
-
-    return () => {
-      audioRef.current.pause();
-    };
-  }, [isPlayingMusic, audioLoaded]);
 
   const adjustPlaneForScreenSize = () => {
     const screenScale = window.innerWidth < 768 ? [1.5, 1.5, 1.5] : [3, 3, 3];
@@ -71,7 +110,6 @@ const Home = () => {
         >
           <Suspense fallback={<Loader />}>
             <directionalLight position={[10, 7, 2]} intensity={2} />
-            {/* light from a distant source - sunlight */}
             <ambientLight intensity={0.5} />
             <hemisphereLight skyColor="#ble1ff" groundColor={"#000000"} />
             <Bird />
@@ -95,9 +133,9 @@ const Home = () => {
 
         <div className="absolute bottom-2 left-2">
           <img
-            src={!isPlayingMusic ? soundoff : soundon}
+            src={isPlayingMusic ? soundon : soundoff}
             alt="jukebox"
-            onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+            onClick={toggleMusic}
             className="w-10 h-10 cursor-pointer object-contain"
           />
         </div>
