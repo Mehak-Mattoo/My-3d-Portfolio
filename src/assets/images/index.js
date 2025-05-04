@@ -8,4 +8,7 @@ import scriptsolve from "./scriptsolve.png";
 import plane from "./plane.png";
 
 
+
+
+
 export { chegg, payr, fliprobo, summarizeX, myIcon, scriptsolve, plane };
