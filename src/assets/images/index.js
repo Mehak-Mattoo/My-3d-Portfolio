@@ -6,9 +6,15 @@ import payr from "./payr.png";
 import myIcon from "./mehak_mattoo_icon.png";
 import scriptsolve from "./scriptsolve.png";
 import plane from "./plane.png";
+import studio137 from "./studio137.jpeg";
 
-
-
-
-
-export { chegg, payr, fliprobo, summarizeX, myIcon, scriptsolve, plane };
+export {
+  chegg,
+  payr,
+  fliprobo,
+  summarizeX,
+  myIcon,
+  scriptsolve,
+  plane,
+  studio137,
+};

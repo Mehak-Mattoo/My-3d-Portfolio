@@ -53,11 +53,11 @@ const About = () => {
                 date={experience.date}
                 iconStyle={{ background: experience.iconBg }}
                 icon={
-                  <div className="flex justify-center items-center w-full h-full">
+                  <div className="flex justify-center items-center w-full h-full ">
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
-                      className="w-[90%] h-[90%] object-contain"
+                      className="w-[70%] h-[90%] object-contain"
                     />
                   </div>
                 }

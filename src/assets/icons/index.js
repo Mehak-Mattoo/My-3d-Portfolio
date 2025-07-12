@@ -29,6 +29,7 @@ import note from "./note.png";
 import soundoff from "./soundoff.png";
 import figma from "./figma.svg";
 import next from "./next.png";
+import findiy from "./findiy.png";
 
 export {
   next,
@@ -61,5 +62,6 @@ export {
   soundon,
   soundoff,
   figma,
+  findiy,
   mui,
 };

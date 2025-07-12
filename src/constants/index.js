@@ -5,6 +5,8 @@ import {
   summarizeX,
   scriptsolve,
   plane,
+  studio137,
+
 } from "../assets/images";
 
 import {
@@ -33,6 +35,7 @@ import {
   figma,
   typescript,
   next,
+  findiy,
 } from "../assets/icons";
 
 export const skills = [
@@ -132,18 +135,20 @@ export const skills = [
     name: "NextJs",
     type: "Frontend",
   },
+
 ];
 
 export const experiences = [
   {
-    title: "Full Stack Developer Intern",
-    company_name: "ScriptSolve",
-    icon: scriptsolve,
-    iconBg: "#DDE1E4",
-    date: "Jan 2025 - Present",
+    title: "Frontend Developer",
+    company_name: "Studio 137 Digital Media Solutions",
+    icon: studio137,
+    iconBg: "#9c2a29",
+    date: "June 2025 - Present",
     points: [
-      "Expedited and maintained responsive web application using Next.js, improving load times by 30%",
-      "Transformed user navigation with dynamic routing and seamless API integrations, boosting page interactions by 25%",
+      "Designed and implemented 10+ interactive assessment screens using React enhancing user completion rates by 35%.",
+      "Built dynamic, state-driven components for MCQs, progress tracking, and conditional flows, supporting multiple assessment types.",
+      "Optimized performance and UX across devices with responsive layouts and custom hooks",
     ],
   },
   {
@@ -159,17 +164,17 @@ export const experiences = [
       "Participated in code reviews, debugging sessions, and the deployment of updates in a fast-paced environment.",
     ],
   },
-  {
-    title: "Java Intern",
-    company_name: "Flip Robo Technologies",
-    icon: fliprobo,
-    iconBg: "#E6D3A3",
-    date: "Oct 2023 - Feb 2024",
-    points: [
-      "Delivered end-to-end development for 5+ web applications, ensuring user-friendly experiences",
-      "Implemented responsive designs and integrated external APIs to enhance application functionality.",
-    ],
-  },
+  // {
+  //   title: "Java Intern",
+  //   company_name: "Flip Robo Technologies",
+  //   icon: fliprobo,
+  //   iconBg: "#E6D3A3",
+  //   date: "Oct 2023 - Feb 2024",
+  //   points: [
+  //     "Delivered end-to-end development for 5+ web applications, ensuring user-friendly experiences",
+  //     "Implemented responsive designs and integrated external APIs to enhance application functionality.",
+  //   ],
+  // },
 ];
 
 export const socialLinks = [
@@ -188,8 +193,18 @@ export const socialLinks = [
 
 export const projects = [
   {
+    iconUrl: findiy,
+    theme: "btn-back-white",
+    name: "Findiy - AI Workforce for CPG Universe",
+    description: [
+      "Allows users to interact with 5+ specialized AI agents for business workflows including AI-driven voice calls.",
+    ],
+    link: "https://www.findiy.ai/",
+  },
+
+  {
     iconUrl: plane,
-    theme: "btn-back-red",
+    theme: "btn-back-blue",
     name: "TicketParse - Plane Ticket Data Parser",
     description: [
       "Devised an application to process plane ticket data from PDFs into a flexible ticket template that adapts to different ticket inputs.",
@@ -207,7 +222,7 @@ export const projects = [
 
   {
     iconUrl: news,
-    theme: "btn-back-red",
+    theme: "btn-back-yellow",
     name: "News Verse",
     description:
       "Built a responsive news website serving real-time updates across 10+ categories, ensuring the website provides the latest information with no delays.",
@@ -215,7 +230,7 @@ export const projects = [
   },
   {
     iconUrl: chat,
-    theme: "btn-back-pink",
+    theme: "btn-back-blue",
     name: "Converso - A Chat Application",
     description:
       "Engineered a messaging platform using MERN stack with real-time bi-directional communication between users.",
@@ -249,7 +264,7 @@ export const projects = [
 
   {
     iconUrl: tictactoe,
-    theme: "btn-back-yellow",
+    theme: "btn-back-green",
     name: "Tic -Tac -Toe",
     description:
       "Experience the timeless fun of Tic Tac Toe in a sleek and modern online format, perfect for players of all ages.",
