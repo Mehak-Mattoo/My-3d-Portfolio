@@ -20,8 +20,7 @@ const About = () => {
       </h1>
       <div className="mt-5 text-sm md:text-base gap-3 text-slate-500">
         <p>
-        A motivated full-stack developer with hands-on experience in the MERN stack, proficient in creating user-friendly and dynamic web applications. Known for strong problem-solving abilities, effective teamwork, and exceptional communication skills,
-        contributing to both individual and team success in high-pressure environments.
+         A creative Frontend Developer passionate about crafting elegant frontends. From concept to deployment, I bring products to life using React, Next.js, and TypeScript, ensuring every project feels smooth, smart, and scalable.
         </p>
       </div>
       <div className="py-10 flex flex-col">
@@ -69,7 +68,7 @@ const About = () => {
                 }}
               >
                 <div>
-                  <h3 className=" text-l font-poppins font-semibold">
+                  <h3 className=" text-lg font-poppins font-semibold">
                     {experience.title}
                   </h3>
 
@@ -80,7 +79,7 @@ const About = () => {
                     {experience.company_name}
                   </p>
                 </div>
-                <ul className="my-5 list-disc l-5 space-y-2">
+                <ul className="my-4 list-disc l-5 space-y-2">
                   {experience.points.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}

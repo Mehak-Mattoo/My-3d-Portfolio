@@ -38,9 +38,9 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="mt-16 flex flex-wrap gap-7">
+      <div className="mt-16 mx-auto justify-center items-center flex flex-wrap gap-7">
         {projects.map((project) => (
-          <div className="lg:w-[400px] w-full" key={project.name}>
+          <div className="lg:w-[360px] w-full" key={project.name}>
             <div className="block-container w-12 h-12">
               <div className={`btn-back rounded-xl ${project.theme}`} />
               <div className="btn-front rounded-xl flex justify-center items-center">
@@ -52,10 +52,10 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className="mt-5 flex flex-col">
-              <h4 className="text-2xl font-poppins font-semibold">
+            <div className="my-8 flex flex-col">
+              <h5 className="text-xl font-poppins font-semibold">
                 {project.name}
-              </h4>
+              </h5>
               {(Array.isArray(project.description)
                 ? project.description
                 : [project.description]

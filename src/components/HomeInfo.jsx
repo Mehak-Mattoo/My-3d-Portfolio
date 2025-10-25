@@ -22,7 +22,7 @@ const HomeInfo = ({ currentStage }) => {
 
         <Link to="/about" className=" neo-brutalism-white neo-btn">
           Learn more
-          <img src={arrow} alt="arrow" className="w-2 h-2 object-contain" />
+          <img src={arrow} alt="arrow" className="w-3 h-3 object-contain" />
         </Link>
       </div>
     );

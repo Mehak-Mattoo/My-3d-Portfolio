@@ -23,7 +23,7 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-7xl mx-auto sm:p-16 pb-12 px-8 min-h-[calc(100vh-80px)];
   }
 
   .head-text {
@@ -51,7 +51,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .header {
-    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+    @apply flex justify-between items-center sm:px-16 px-8  mx-auto fixed bottom-2 bg-transparent z-10 right-0 left-0;
   }
 
   .footer {
@@ -63,17 +63,43 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-xl neo-brutalism-blue py-4 pb-8 px-6;
   }
 
   .neo-btn {
-    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+    @apply py-2 px-2 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
   }
 
   .cta {
     @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
   }
 
+  .nav-icon-link {
+    @apply relative flex items-center justify-center p-3 rounded-full transition-all duration-300 hover:scale-110;
+  }
+
+  .nav-icon {
+    @apply text-2xl transition-all duration-300;
+  }
+
+  .nav-tooltip {
+    @apply absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 pointer-events-none transition-opacity duration-300 whitespace-nowrap;
+  }
+
+  .nav-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #111827 transparent transparent transparent;
+  }
+
+  .nav-icon-link:hover .nav-tooltip {
+    @apply opacity-100;
+  }
 
 }
 

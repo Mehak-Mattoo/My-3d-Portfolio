@@ -139,12 +139,28 @@ export const skills = [
 ];
 
 export const experiences = [
+
+  {
+    title: "Frontend Developer",
+    company_name: "Evolve AI",
+    icon: findiy,
+    iconBg: "#ECF4E8",
+    date: "May 2025 - Present",
+    points: [
+      "Led the end-to-end development of a comprehensive CPG platform using Next.js, architecting a scalable and modular frontend that improved performance and maintainability.",
+      "Reduced backend API calls by 40% by implementing efficient state management, caching strategies, and API best practices.",
+      "Built a real-time chat platform with integrated notification system, enabling instant communication between brands and retailers.",
+      "Collaborated closely with backend and design teams to create a cohesive, high-performing product experience, ensuring accessibility and responsiveness across all devices.",
+      "Designed and developed a conversational UI for AI-driven voice interactions, allowing users to autonomously contact retailers and brands — reducing manual call dependencies by 70%.",
+      "Championed code quality, performance audits, and frontend deployment pipelines, resulting in faster load times and enhanced user engagement."
+    ],
+  },
   {
     title: "Frontend Developer",
     company_name: "Studio 137 Digital Media Solutions",
     icon: studio137,
     iconBg: "#9c2a29",
-    date: "June 2025 - Present",
+    date: "May 2025 - Present",
     points: [
       "Designed and implemented 10+ interactive assessment screens using React enhancing user completion rates by 35%.",
       "Built dynamic, state-driven components for MCQs, progress tracking, and conditional flows, supporting multiple assessment types.",
@@ -164,17 +180,7 @@ export const experiences = [
       "Participated in code reviews, debugging sessions, and the deployment of updates in a fast-paced environment.",
     ],
   },
-  // {
-  //   title: "Java Intern",
-  //   company_name: "Flip Robo Technologies",
-  //   icon: fliprobo,
-  //   iconBg: "#E6D3A3",
-  //   date: "Oct 2023 - Feb 2024",
-  //   points: [
-  //     "Delivered end-to-end development for 5+ web applications, ensuring user-friendly experiences",
-  //     "Implemented responsive designs and integrated external APIs to enhance application functionality.",
-  //   ],
-  // },
+ 
 ];
 
 export const socialLinks = [
@@ -199,7 +205,7 @@ export const projects = [
     description: [
       "Allows users to interact with 5+ specialized AI agents for business workflows including AI-driven voice calls.",
     ],
-    link: "https://www.findiy.ai/",
+    link: "https://findiy-agentic.ai",
   },
 
   {
