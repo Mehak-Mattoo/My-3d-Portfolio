@@ -7,7 +7,7 @@ import MailIcon from "@mui/icons-material/Mail";
 
 const Navbar = () => {
   return (
-    <header className="header flex justify-center mt-2 rounded-2xl items-center !bg-white max-w-fit mx-auto px-8">
+    <header className="header flex justify-center mt-2 rounded-2xl drop-shadow-lg items-center !bg-white max-w-fit mx-auto px-8">
       <nav className="flex gap-8 items-center">
         <NavLink
           to="/"

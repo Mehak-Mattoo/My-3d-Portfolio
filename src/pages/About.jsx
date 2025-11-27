@@ -19,9 +19,7 @@ const About = () => {
         </span>
       </h1>
       <div className="mt-5 text-sm md:text-base gap-3 text-slate-500">
-        <p>
-         A creative Frontend Developer passionate about crafting elegant frontends. From concept to deployment, I bring products to life using React, Next.js, and TypeScript, ensuring every project feels smooth, smart, and scalable.
-        </p>
+       <p>I’m a frontend developer who loves blending design with code to build interfaces that feel effortless. Using React, Next.js, and TypeScript, I create experiences that are smooth, modern, and delightful to use.</p>
       </div>
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
