@@ -204,55 +204,61 @@ export const socialLinks = [
 export const projects = [
   {
     iconUrl: luna,
+    imageUrl: luna,
     theme: "btn-back-red",
     name: "AI Workspace",
+    featured: true,
     description: [
       "AI Workspace brings notes, documents, and a context-aware AI assistant into a single, seamless interface — with real-time sync, secure auth, and a frontend tuned for speed.",
     ],
-    link: "https://myai-workspace.vercel.app/",
+    highlight: "Notes, docs, and context-aware AI in one fast, synced workspace.",
+    tech: ["NextJS", "TypeScript", "Supabase", "OpenAI"],
+    live: "https://myai-workspace.vercel.app/",
+    github: "https://github.com/Mehak-Mattoo/AI-Workspace",
   },
-
   {
     iconUrl: plane,
+    imageUrl: plane,
     theme: "btn-back-blue",
-    name: "TicketParse - Plane Ticket Data Parser",
+    name: "TicketParse",
     description: [
       "Devised an application to process plane ticket data from PDFs into a flexible ticket template that adapts to different ticket inputs.",
     ],
-    link: "https://github.com/Mehak-Mattoo/Ticket-Parse",
+    highlight: "Turns messy PDF tickets into structured, reusable templates.",
+    tech: ["React", "Node.js", "PDF Parsing"],
+    github: "https://github.com/Mehak-Mattoo/Ticket-Parse",
   },
   {
     iconUrl: chat,
+    imageUrl: chat,
     theme: "btn-back-blue",
-    name: "Converso - A Chat Application",
+    name: "Converso",
     description:
       "Engineered a messaging platform using MERN stack with real-time bi-directional communication between users.",
-    link: "https://github.com/Mehak-Mattoo/chat-app",
+    highlight: "Real-time MERN chat with instant two-way messaging.",
+    tech: ["React", "Node.js", "MongoDB", "Socket.io"],
+    github: "https://github.com/Mehak-Mattoo/chat-app",
   },
   {
     iconUrl: summarizeX,
+    imageUrl: summarizeX,
     theme: "btn-back-black",
-    name: "SummarizeX - AI Article Summarizer",
+    name: "SummarizeX",
     description:
       "Developed an AI-powered summarizer with features like PDF/DOC downloads, handling over 100+ summaries monthly.",
-    link: "https://summarize-x.vercel.app/",
+    highlight: "100+ monthly summaries with PDF/DOC export support.",
+    tech: ["React", "OpenAI", "Node.js", "Tailwind CSS"],
+    live: "https://summarize-x.vercel.app/",
   },
-
   {
     iconUrl: news,
+    imageUrl: news,
     theme: "btn-back-yellow",
     name: "News Verse",
     description:
       "Built a responsive news website serving real-time updates across 10+ categories, ensuring the website provides the latest information with no delays.",
-    link: "https://news-verse-mu.vercel.app/",
+    highlight: "Live news across 10+ categories with zero-lag updates.",
+    tech: ["React", "News API", "Tailwind CSS"],
+    live: "https://news-verse-mu.vercel.app/",
   },
-
-  // {
-  //   iconUrl: dictionary,
-  //   theme: "btn-back-blue",
-  //   name: "English Dictionary",
-  //   description:
-  //     "Dive deep into the definitions of words and enrich your understanding of their meanings and pronounciation.",
-  //   link: "https://mehak-dictionary.netlify.app",
-  // },
 ];

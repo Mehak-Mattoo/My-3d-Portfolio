@@ -5,7 +5,7 @@ import { Home, About, Projects, Contact } from "./pages";
 
 const App = () => {
   return (
-    <main className=" h-[90vh]">
+    <main className="min-h-screen">
   
       <Router>
     

@@ -16,6 +16,15 @@ export function Island({
   const lastX = useRef(0); // Tracks the last X-axis position of the mouse or touch.
   const rotationSpeed = useRef(0);
   const dampingFactor = 0.95; // Factor to slow down the rotation gradually.
+  const currentStageRef = useRef(1);
+
+  const getStageFromRotation = (normalizedRotation) => {
+    if (normalizedRotation >= 5.45 && normalizedRotation <= 5.85) return 4;
+    if (normalizedRotation >= 0.85 && normalizedRotation <= 1.3) return 3;
+    if (normalizedRotation >= 2.4 && normalizedRotation <= 2.6) return 2;
+    if (normalizedRotation >= 4.25 && normalizedRotation <= 4.75) return 1;
+    return null;
+  };
 
   const handlePointerDown = (e) => {
     e.stopPropagation();
@@ -102,21 +111,10 @@ export function Island({
     const normalizedRotation =
       ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
-    switch (true) {
-      case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-        setCurrentStage(4);
-        break;
-      case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-        setCurrentStage(3);
-        break;
-      case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-        setCurrentStage(2);
-        break;
-      case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-        setCurrentStage(1);
-        break;
-      default:
-        setCurrentStage(null);
+    const stage = getStageFromRotation(normalizedRotation);
+    if (stage !== null && stage !== currentStageRef.current) {
+      currentStageRef.current = stage;
+      setCurrentStage(stage);
     }
   });
 

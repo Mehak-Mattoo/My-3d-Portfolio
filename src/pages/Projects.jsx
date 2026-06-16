@@ -1,18 +1,13 @@
 import React from "react";
 import CTA from "../components/CTA";
+import ProjectCard from "../components/ProjectCard";
 import { projects } from "../constants";
-import { arrow } from "../assets/icons";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
-  // Handle resume download
   const handleResumeDownload = () => {
-    // The path to your resume file in the public folder
-    // Use window.location.origin to get the base URL of your application
     const baseUrl = window.location.origin;
     const resumePath = `${baseUrl}/Mehak_Mattoo_Resume.pdf`;
 
-    // Create an anchor element
     const link = document.createElement("a");
     link.href = resumePath;
     link.download = "Mehak_Mattoo_Resume.pdf";
@@ -31,59 +26,16 @@ const Projects = () => {
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p className="text-sm md:text-base  mt-2 leading-relaxed">
-          I've embarked on numerous projects throughout the years, but these are
-          the ones I hold closest to my heart. You can check them out and feel
-          free to contribute your ideas for further enhancements.
+        <p className="text-sm md:text-base mt-2 leading-relaxed">
+          A selection of products I&apos;ve built — from AI-powered workspaces
+          to real-time apps — with a focus on performance, polish, and
+          thoughtful UX.
         </p>
       </div>
 
-      <div className="mt-16 mx-auto justify-center items-center flex flex-wrap gap-7">
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5">
         {projects.map((project) => (
-          <div className="lg:w-[360px] w-full" key={project.name}>
-            <div className="block-container w-12 h-12">
-              <div className={`btn-back rounded-xl ${project.theme}`} />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  src={project.iconUrl}
-                  alt="Project Icon"
-                  className="w-1/2 h-1/2 object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="my-8 flex flex-col">
-              <h5 className="text-xl font-poppins font-semibold">
-                {project.name}
-              </h5>
-              {(Array.isArray(project.description)
-                ? project.description
-                : [project.description]
-              )
-                .filter(Boolean) // Removes falsy values (null, undefined, etc.)
-                .map((desc, index) => (
-                  <p key={index} className="mt-2 text-slate-500">
-                    {desc}
-                  </p>
-                ))}
-
-              <div className="mt-5 flex items-center gap-2 font-poppins">
-                <Link
-                  to={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-blue-600"
-                >
-                  Link
-                </Link>
-                <img
-                  src={arrow}
-                  alt="arrow"
-                  className="w-4 h-4 object-contain"
-                />
-              </div>
-            </div>
-          </div>
+          <ProjectCard key={project.name} project={project} />
         ))}
       </div>
 
