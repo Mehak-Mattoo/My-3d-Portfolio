@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useState, useRef, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons";
@@ -43,7 +43,7 @@ const Home = () => {
         // Wait for any existing play promise to resolve or reject
         if (playPromiseRef.current) {
           try {
-            await playPromiseRef.current;
+             playPromiseRef.current;
           } catch (e) {
             // Ignore errors from previous play promises
           }
@@ -53,7 +53,7 @@ const Home = () => {
         if (isPlayingMusic) {
           // Store the new play promise
           playPromiseRef.current = audioRef.current.play();
-          await playPromiseRef.current;
+           playPromiseRef.current;
         } else {
           audioRef.current.pause();
         }
@@ -113,7 +113,7 @@ const Home = () => {
             <ambientLight intensity={0.5} />
             <hemisphereLight skyColor="#ble1ff" groundColor={"#000000"} />
             <Bird />
-            <Sky isRotating={isRotating} />
+            <Sky />
             <Island
               position={islandPosition}
               scale={islandScale}
@@ -123,7 +123,6 @@ const Home = () => {
               setCurrentStage={setCurrentStage}
             />
             <Plane
-              isRotating={isRotating}
               scale={planeScale}
               position={planePosition}
               rotation={[0, 20, 0]}

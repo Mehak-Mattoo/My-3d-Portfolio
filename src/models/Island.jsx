@@ -87,36 +87,36 @@ export function Island({
     };
   }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
 
-  useFrame(() => {
+  useFrame((_, delta) => {
+    const autoRotateSpeed = 0.15 * delta;
+
     if (!isRotating) {
       rotationSpeed.current *= dampingFactor;
       if (Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0;
       }
-      islandRef.current.rotation.y += rotationSpeed.current;
-    } else {
-      // When rotating, determine the current stage based on island's orientation
-      const rotation = islandRef.current.rotation.y;
-      const normalizedRotation =
-        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+      islandRef.current.rotation.y -= rotationSpeed.current + autoRotateSpeed;
+    }
 
-      // Set the current stage based on the island's orientation
-      switch (true) {
-        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-          setCurrentStage(4);
-          break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-          setCurrentStage(3);
-          break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(2);
-          break;
-        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-          setCurrentStage(1);
-          break;
-        default:
-          setCurrentStage(null);
-      }
+    const rotation = islandRef.current.rotation.y;
+    const normalizedRotation =
+      ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+
+    switch (true) {
+      case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+        setCurrentStage(4);
+        break;
+      case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+        setCurrentStage(3);
+        break;
+      case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+        setCurrentStage(2);
+        break;
+      case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+        setCurrentStage(1);
+        break;
+      default:
+        setCurrentStage(null);
     }
   });
 

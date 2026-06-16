@@ -18,7 +18,7 @@ const About = () => {
           Mehak Mattoo
         </span>
       </h1>
-      <div className="mt-5 text-base md:text-lg gap-3 text-slate-500">
+      <div className="mt-5 text-sm md:text-base  gap-3 text-slate-500">
         <p>
           I build frontends that think. I specialise in AI-powered interfaces,
           real-time streaming UIs, and agentic workflows — crafting experiences
