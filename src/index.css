@@ -92,6 +92,29 @@ body:has(.card[data-color="green"]:hover) {
   .nav-icon-link:hover .nav-tooltip {
     @apply opacity-100;
   }
+
+  .group:hover .nav-tooltip {
+    @apply opacity-100;
+  }
+
+  .skill-tooltip {
+    @apply absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-gray-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 pointer-events-none transition-opacity duration-300 whitespace-nowrap z-10;
+  }
+
+  .skill-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #111827 transparent;
+  }
+
+  .group:hover .skill-tooltip {
+    @apply opacity-100;
+  }
 }
 
 .glassmorphism {
