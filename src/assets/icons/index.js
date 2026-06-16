@@ -27,6 +27,10 @@ import soundoff from "./soundoff.png";
 import figma from "./figma.svg";
 import next from "./next.png";
 import findiy from "./findiy.png";
+import supabase from "./supabase.jpeg";
+import tanstack from "./tanstack.png";
+import openaAI from "./openAI.png";
+import zustand from "./zustand.jpeg";
 
 export {
   next,
@@ -59,4 +63,8 @@ export {
   figma,
   findiy,
   mui,
+  supabase,
+  tanstack,
+  openaAI,
+  zustand,
 };

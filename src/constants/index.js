@@ -1,10 +1,4 @@
-import {
-  payr,
-  summarizeX,
-  plane,
-  studio137,
-  luna,
-} from "../assets/images";
+import { payr, summarizeX, plane, studio137, luna } from "../assets/images";
 
 import {
   css,
@@ -28,6 +22,10 @@ import {
   typescript,
   next,
   findiy,
+  supabase,
+  tanstack,
+  openaAI,
+  zustand,
 } from "../assets/icons";
 
 export const skills = [
@@ -126,6 +124,26 @@ export const skills = [
     imageUrl: next,
     name: "NextJs",
     type: "Frontend",
+  },
+  {
+    imageUrl: supabase,
+    name: "Supabase",
+    type: "Database",
+  },
+  {
+    imageUrl: tanstack,
+    name: "Tanstack",
+    type: "Frontend",
+  },
+  {
+    imageUrl: openaAI,
+    name: "OpenAI",
+    type: "AI",
+  },
+  {
+    imageUrl: zustand,
+    name: "Zustand",
+    type: "State Management",
   },
 ];
 
@@ -228,7 +246,6 @@ export const projects = [
       "Built a responsive news website serving real-time updates across 10+ categories, ensuring the website provides the latest information with no delays.",
     link: "https://news-verse-mu.vercel.app/",
   },
- 
 
   // {
   //   iconUrl: dictionary,
@@ -238,7 +255,4 @@ export const projects = [
   //     "Dive deep into the definitions of words and enrich your understanding of their meanings and pronounciation.",
   //   link: "https://mehak-dictionary.netlify.app",
   // },
-
- 
-
 ];
