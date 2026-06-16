@@ -31,7 +31,7 @@ const Projects = () => {
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p className="text-slate-500 mt-2 leading-relaxed">
+        <p className="text-base md:text-lg mt-2 leading-relaxed">
           I've embarked on numerous projects throughout the years, but these are
           the ones I hold closest to my heart. You can check them out and feel
           free to contribute your ideas for further enhancements.

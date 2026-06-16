@@ -1,23 +1,15 @@
 import {
-  chegg,
   payr,
-  fliprobo,
   summarizeX,
-  scriptsolve,
   plane,
   studio137,
-
+  luna,
 } from "../assets/images";
 
 import {
-  contact,
   css,
   chat,
-  dictionary,
-  note,
-  tictactoe,
   news,
-  text,
   express,
   git,
   github,
@@ -135,24 +127,22 @@ export const skills = [
     name: "NextJs",
     type: "Frontend",
   },
-
 ];
 
 export const experiences = [
-
   {
-    title: "Frontend Developer",
+    title: "Lead Frontend Developer",
     company_name: "Evolve AI",
     icon: findiy,
     iconBg: "#ECF4E8",
     date: "May 2025 - Present",
     points: [
-      "Led the end-to-end development of a comprehensive CPG platform using Next.js, architecting a scalable and modular frontend that improved performance and maintainability.",
-      "Reduced backend API calls by 40% by implementing efficient state management, caching strategies, and API best practices.",
-      "Built a real-time chat platform with integrated notification system, enabling instant communication between brands and retailers.",
-      "Collaborated closely with backend and design teams to create a cohesive, high-performing product experience, ensuring accessibility and responsiveness across all devices.",
+      "Led the entire frontend architecture of an agentic CPG platform, improving SEO and reducing UI-related defects by 30%",
+      "Built a dynamic Sell Sheet Generator that auto-populates product data from user profiles and applies it to pre-designed templates, reducing manual creation time by 70%.",
+      "Integrated streaming agentic chat interface, handling SSE-based response rendering and CNAME-based conversation tagging — increasing message retrieval efficiency by 45%.",
+      "Built a stakeholder relationship workflow (send/accept connection requests), resulting in a 40% increase in cross-team engagement on the platform",
       "Designed and developed a conversational UI for AI-driven voice interactions, allowing users to autonomously contact retailers and brands — reducing manual call dependencies by 70%.",
-      "Championed code quality, performance audits, and frontend deployment pipelines, resulting in faster load times and enhanced user engagement."
+      "Improved perceived load speed by 40% through aggressive prefetching, route-level caching, and polished skeleton screens for a smoother user experience.",
     ],
   },
   {
@@ -160,11 +150,11 @@ export const experiences = [
     company_name: "Studio 137 Digital Media Solutions",
     icon: studio137,
     iconBg: "#9c2a29",
-    date: "May 2025 - Present",
+    date: "May 2025 - December 2025",
     points: [
       "Designed and implemented 10+ interactive assessment screens using React enhancing user completion rates by 35%.",
       "Built dynamic, state-driven components for MCQs, progress tracking, and conditional flows, supporting multiple assessment types.",
-      "Optimized performance and UX across devices with responsive layouts and custom hooks",
+      "Improved performance and cross-device UX through responsive layouts and custom hooks, reducing load time by 25%",
     ],
   },
   {
@@ -174,17 +164,13 @@ export const experiences = [
     iconBg: "#000000",
     date: "Aug 2024 - Dec 2024",
     points: [
-      "Expedited and maintained responsive web application using Next.js, improving load times by 30%.",
+      "Increased partner engagement by 40% by building seamless API integrations that enabled external organizations to contribute content directly to the platform.",
       "Reduced server load by 20% by integrating AWS S3 for seamless media storage by offloading file handling to the cloud",
-      "Spearheaded a multi-account login system, allowing users to seamlessly manage multiple accounts from a single platform, increasing user efficiency by 10%.",
-      "Participated in code reviews, debugging sessions, and the deployment of updates in a fast-paced environment.",
     ],
   },
- 
 ];
 
 export const socialLinks = [
-
   {
     name: "GitHub",
     iconUrl: github,
@@ -199,13 +185,13 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: findiy,
-    theme: "btn-back-white",
-    name: "Findiy - AI Workforce for CPG Universe",
+    iconUrl: luna,
+    theme: "btn-back-red",
+    name: "AI Workspace",
     description: [
-      "Allows users to interact with 5+ specialized AI agents for business workflows including AI-driven voice calls.",
+      "AI Workspace brings notes, documents, and a context-aware AI assistant into a single, seamless interface — with real-time sync, secure auth, and a frontend tuned for speed.",
     ],
-    link: "https://findiy-agentic.ai",
+    link: "https://myai-workspace.vercel.app/",
   },
 
   {
@@ -216,6 +202,14 @@ export const projects = [
       "Devised an application to process plane ticket data from PDFs into a flexible ticket template that adapts to different ticket inputs.",
     ],
     link: "https://github.com/Mehak-Mattoo/Ticket-Parse",
+  },
+  {
+    iconUrl: chat,
+    theme: "btn-back-blue",
+    name: "Converso - A Chat Application",
+    description:
+      "Engineered a messaging platform using MERN stack with real-time bi-directional communication between users.",
+    link: "https://github.com/Mehak-Mattoo/chat-app",
   },
   {
     iconUrl: summarizeX,
@@ -234,46 +228,17 @@ export const projects = [
       "Built a responsive news website serving real-time updates across 10+ categories, ensuring the website provides the latest information with no delays.",
     link: "https://news-verse-mu.vercel.app/",
   },
-  {
-    iconUrl: chat,
-    theme: "btn-back-blue",
-    name: "Converso - A Chat Application",
-    description:
-      "Engineered a messaging platform using MERN stack with real-time bi-directional communication between users.",
-    link: "https://github.com/Mehak-Mattoo/chat-app",
-  },
-  {
-    iconUrl: note,
-    theme: "btn-back-pink",
-    name: "Note Zen - A Note-Taking Application",
-    description:
-      "Developed a feature-rich note-taking platform with CRUD Functionality.",
-    link: "https://github.com/Mehak-Mattoo/note-taking-site",
-  },
+ 
 
-  {
-    iconUrl: dictionary,
-    theme: "btn-back-blue",
-    name: "English Dictionary",
-    description:
-      "Dive deep into the definitions of words and enrich your understanding of their meanings and pronounciation.",
-    link: "https://mehak-dictionary.netlify.app",
-  },
+  // {
+  //   iconUrl: dictionary,
+  //   theme: "btn-back-blue",
+  //   name: "English Dictionary",
+  //   description:
+  //     "Dive deep into the definitions of words and enrich your understanding of their meanings and pronounciation.",
+  //   link: "https://mehak-dictionary.netlify.app",
+  // },
 
-  {
-    iconUrl: text,
-    theme: "btn-back-orange",
-    name: "Text-Utils",
-    description: "Manipulate and format your desired text with just a click.",
-    link: "https://mehak-text-utils.netlify.app",
-  },
+ 
 
-  {
-    iconUrl: tictactoe,
-    theme: "btn-back-green",
-    name: "Tic -Tac -Toe",
-    description:
-      "Experience the timeless fun of Tic Tac Toe in a sleek and modern online format, perfect for players of all ages.",
-    link: "https://mehak-tic-tac-toe.netlify.app",
-  },
 ];

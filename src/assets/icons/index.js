@@ -14,15 +14,12 @@ import redux from "./redux.svg";
 import tailwindcss from "./tailwindcss.svg";
 import typescript from "./typescript.svg";
 import linkedin from "./linkedin.svg";
-import twitter from "./twitter.svg";
 import arrow from "./arrow.svg";
 import contact from "./contact.svg";
 import soundon from "./soundon.png";
 import java from "./java.png";
 import news from "./news.png";
-import tictactoe from "./tic-tac-toe.png";
 import chat from "./chat.png";
-import dictionary from "./dictionary.png";
 import text from "./text.png";
 import bootstrap from "./bootstrap.png";
 import note from "./note.png";
@@ -38,8 +35,7 @@ export {
   git,
   chat,
   note,
-  dictionary,
-  tictactoe,
+  
   news,
   text,
   github,
@@ -56,7 +52,6 @@ export {
   tailwindcss,
   typescript,
   linkedin,
-  twitter,
   arrow,
   contact,
   soundon,

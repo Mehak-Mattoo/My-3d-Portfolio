@@ -18,8 +18,14 @@ const About = () => {
           Mehak Mattoo
         </span>
       </h1>
-      <div className="mt-5 text-sm md:text-base gap-3 text-slate-500">
-       <p>I’m a frontend developer who loves blending design with code to build interfaces that feel effortless. Using React, Next.js, and TypeScript, I create experiences that are smooth, modern, and delightful to use.</p>
+      <div className="mt-5 text-base md:text-lg gap-3 text-slate-500">
+        <p>
+          I build frontends that think. I specialise in AI-powered interfaces,
+          real-time streaming UIs, and agentic workflows — crafting experiences
+          that are as performant under the hood as they are beautiful on the
+          surface. If it's complex, dynamic, and needs to feel effortless,
+          that's exactly where I thrive.
+        </p>
       </div>
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
